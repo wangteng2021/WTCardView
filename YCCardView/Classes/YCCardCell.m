@@ -12,8 +12,7 @@
 
 // 记录索引
 @property (assign, nonatomic) NSInteger recordIndexRow;
-// 标题
-@property (nonatomic, strong) UILabel *titleLabel;
+
 
 @end
 
@@ -48,8 +47,6 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
-    self.titleLabel.frame = CGRectMake(0, self.bounds.size.height - 40, self.bounds.size.width, 40);
 }
 
 #pragma mark - 点击事件
@@ -87,16 +84,6 @@
 
 #pragma mark - set/get
 
-// 标题
-- (UILabel *)titleLabel {
-    if (!_titleLabel) {
-        _titleLabel = [[UILabel alloc] init];
-        _titleLabel.backgroundColor = [UIColor orangeColor];
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-    }
-    return _titleLabel;
-}
-
 #pragma mark - 基类方法
 
 #pragma mark - 基类方法 - 子类可重写
@@ -105,15 +92,12 @@
  cell 赋值
  */
 - (void)yc_setObject:(id)aObject {
-    NSString *titleStr = (NSString *) aObject;
-    self.titleLabel.text = titleStr;
 }
 
 /**
  添加子视图
  */
 - (void)yc_addSubViews {
-    [self addSubview:self.titleLabel];
 }
 
 /**
@@ -127,7 +111,6 @@
  清除数据
  */
 - (void)yc_clearData {
-    self.titleLabel.text = @"";
 }
 
 /**
