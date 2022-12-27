@@ -74,12 +74,12 @@
 
 // 设置圆角阴影
 - (void)p_setShadowRadius {
-    self.layer.cornerRadius      = 8;
-    self.layer.shadowRadius      = 3;
-    self.layer.shadowOpacity     = 0.2;
-    self.layer.shadowOffset      = CGSizeMake(1, 1);
-    self.layer.shadowPath        = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
-    self.layer.masksToBounds = YES;
+//    self.layer.cornerRadius      = 8;
+//    self.layer.shadowRadius      = 3;
+//    self.layer.shadowOpacity     = 0.2;
+//    self.layer.shadowOffset      = CGSizeMake(1, 1);
+//    self.layer.shadowPath        = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+//    self.layer.masksToBounds = YES;
 }
 
 #pragma mark - set/get
