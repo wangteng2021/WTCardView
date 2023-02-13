@@ -133,9 +133,12 @@ typedef enum : NSUInteger {
             }
             if (isCanDrag == NO) { // // 不允许移动，则复位
                 xFromCenter = 0.1;
+                [self panGestureStateEndWithWithDistance:xFromCenter
+                                             andVelocity:CGPointZero];
+            } else {
+                [self panGestureStateEndWithWithDistance:xFromCenter
+                                             andVelocity:[panGesture velocityInView:panGesture.view.superview]];
             }
-            [self panGestureStateEndWithWithDistance:xFromCenter
-                                         andVelocity:[panGesture velocityInView:panGesture.view.superview]];
         }
             break;
         default:
